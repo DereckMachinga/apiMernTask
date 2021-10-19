@@ -6,7 +6,10 @@ require('dotenv').config({ path: 'variables.env' });
 // Funcion para conectar la app a MongoDB
 const conectarBD = async () =>{
     try {
-        await mongoose.connect(process.env.DB_MONGO);
+        await mongoose.connect(process.env.DB_MONGO, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
         console.log('base de datos conectada');
     } catch (error) {
         console.log(error);
