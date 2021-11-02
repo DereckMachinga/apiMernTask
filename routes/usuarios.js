@@ -1,4 +1,4 @@
-// TODO:! Rutas para crear usuarios
+//* Rutas para crear usuarios
 const express = require('express');
 //Importar las rutas de express
 const router = express.Router();
